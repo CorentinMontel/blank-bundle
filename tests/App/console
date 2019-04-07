@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+namespace Cmd\BlankBundle\Tests\App;
+
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+
+set_time_limit(0);
+
+if (!class_exists(Application::class)) {
+    throw new \RuntimeException('You need to add "symfony/framework-bundle" as a Composer dependency.');
+}
+
+$kernel = new Kernel('dev', true);
+$application = new Application($kernel);
+$application->run();

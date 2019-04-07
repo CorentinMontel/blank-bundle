@@ -1,0 +1,8 @@
+/vendor
+/tests/App/cache
+/tests/App/log
+/var/cache
+/var/log
+.idea/
+.phpunit.result.cache
+.DS_Store
